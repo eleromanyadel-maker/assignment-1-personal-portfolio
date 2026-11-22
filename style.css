@@ -1,0 +1,277 @@
+/* ---------- إعدادات عامة ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* تنقل ناعم بين الأقسام */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f4f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ---------- Clearfix ----------
+   لما نستخدم float العنصر الأب بيفقد ارتفاعه،
+   الكلاس ده بيرجّع الارتفاع تاني */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+/* ---------- 1) Header ---------- */
+.header {
+  background-color: #1a4a7e;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 44px;
+}
+
+.position {
+  color: #a9d3ff;
+  font-size: 20px;
+  margin: 10px 0 25px;
+}
+
+/* القائمة في المنتصف + العناصر عليها float */
+.nav-list {
+  list-style: none;
+  display: table;   /* بيخلي القائمة على قد محتواها */
+  margin: 0 auto;   /* وبالتالي تتوسّط */
+}
+
+.nav-list li {
+  float: left;      /* العناصر جنب بعض */
+  margin: 0 8px;
+}
+
+.nav-list a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- الكروت (الأقسام البيضا) ---------- */
+.card {
+  background-color: white;
+  padding: 35px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+
+.card h2,
+.contact h2 {
+  font-size: 30px;
+  color: #123e75;
+  padding-bottom: 18px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #dbeafe;
+}
+
+/* ---------- 2) About Me ---------- */
+.profile-img {
+  float: left;               /* الصورة على الشمال والنص جنبها */
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #e8f1fb;
+  margin: 10px 30px 10px 10px;
+}
+
+.about-text {
+  padding-top: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.intro {
+  font-size: 18px;
+  color: #444;
+}
+
+.intro strong {
+  color: #0b66b8;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0b66b8;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #084f91;
+}
+
+/* ---------- 3) Skills ---------- */
+.skill {
+  float: left;               /* 4 كروت جنب بعض */
+  width: 23.5%;
+  margin: 25px 1% 0;
+  padding: 25px;
+  background-color: #f7faff;
+  border: 1px solid #e3edf9;
+  border-radius: 18px;
+}
+
+.skill h3 {
+  color: #0b66b8;
+  margin-bottom: 15px;
+}
+
+/* ---------- 4) Experience ---------- */
+.job {
+  background-color: #f8fafc;
+  border: 1px solid #e8eef5;
+  border-left: 5px solid #0b66b8;
+  border-radius: 18px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+}
+
+.job-icon {
+  float: left;               /* الأيقونة على الشمال */
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #e3edf9;
+  border-radius: 16px;
+  margin-right: 25px;
+}
+
+.job-info {
+  float: left;               /* بيانات الوظيفة جنب الأيقونة */
+}
+
+.job-info h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.company {
+  color: #0b66b8;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.job-desc {
+  clear: both;               /* الوصف ينزل تحت الأيقونة */
+  padding-top: 20px;
+}
+
+/* ---------- 5) Contact ---------- */
+.contact {
+  background-color: #1a4a7e;
+  color: white;
+  padding: 35px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+
+.contact h2 {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-link {
+  float: left;               /* اللينكات جنب بعض */
+  margin: 25px 15px 0 0;
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+.contact-link:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #061a38;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+  border-radius: 24px;
+}
+
+.footer span {
+  color: #6fc3ff;
+  font-weight: bold;
+}
+
+/* ---------- موبايل ---------- */
+@media (max-width: 800px) {
+  .skill {
+    width: 48%;
+  }
+}
+
+@media (max-width: 560px) {
+  .profile-img {
+    float: none;             /* على الموبايل الصورة فوق النص */
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .skill {
+    float: none;
+    width: 100%;
+    margin: 20px 0 0;
+  }
+
+  .nav-list {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-list li {
+    float: none;
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .job-info {
+    float: none;
+    overflow: hidden;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+}
